@@ -1,4 +1,5 @@
-require "ruboty/brains/google_spreadsheet"
 require "ruboty/google_spreadsheet/client"
 require "ruboty/google_spreadsheet/spreadsheet"
+require "ruboty/handlers/google_spreadsheet"
+require "ruboty/actions/google_spreadsheet/show_today"
 require "ruboty/google_spreadsheet/version"

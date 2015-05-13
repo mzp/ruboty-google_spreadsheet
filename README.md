@@ -1,4 +1,4 @@
-# Ruboty::GoogleSpreadsheet
+# Ruboty::GoogleSpreadsheet(wip)
 
 Store [Ruboty](https://github.com/r7kamura/ruboty/)'s memory in Google Spreadsheet.
 

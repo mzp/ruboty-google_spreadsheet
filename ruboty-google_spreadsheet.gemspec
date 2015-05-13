@@ -6,10 +6,10 @@ require 'ruboty/google_spreadsheet/version'
 Gem::Specification.new do |spec|
   spec.name          = "ruboty-google_spreadsheet"
   spec.version       = Ruboty::GoogleSpreadsheet::VERSION
-  spec.authors       = ["Naoto Kaneko"]
-  spec.email         = ["naoty.k@gmail.com"]
+  spec.authors       = ["MIZUNO Hiroki"]
+  spec.email         = ["mzpppp@gmail.com"]
   spec.summary       = %q{Store Ruboty's memory in Google Spreadsheet.}
-  spec.homepage      = "https://github.com/naoty/ruboty-google_spreadsheet"
+  spec.homepage      = "https://github.com/mzp/ruboty-google_spreadsheet"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
