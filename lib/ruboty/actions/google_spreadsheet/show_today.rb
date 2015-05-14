@@ -4,10 +4,11 @@ module Ruboty
     module Actions
       module GoogleSpreadsheet
         class ShowToday
-          attr_reader :message, :client
+          attr_reader :message, :client, :date
 
-          def initialize(message)
+          def initialize(message, date)
             @message = message
+            @date = date
 
             @client = Ruboty::GoogleSpreadsheet::Client.new(
               client_id: ENV["GOOGLE_CLIENT_ID"],
@@ -39,8 +40,12 @@ module Ruboty
             Date.today.strftime("%Y/%m/%d")
           end
 
+          def tommorow
+            (Date.today + 1).strftime("%Y/%m/%d")
+          end
+
           def row
-            data[0].rows.find {|row| row.include? today }
+            data[0].rows.find {|row| row.include? self.send(date) }
           end
         end
       end

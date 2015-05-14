@@ -8,12 +8,22 @@ module Ruboty
 
       on(
         /spreadsheet today (?<key>\S+)/,
-        name: "show_spreadsheet",
-        description: "Create a new issue",
+        name: "show_today",
+        description: "Show today row"
       )
 
-      def show_spreadsheet(message)
-        Ruboty::Actions::GoogleSpreadsheet::ShowToday.new(message).call
+      on(
+        /spreadsheet tommorow (?<key>\S+)/,
+        name: "show_tommorow",
+        description: "Show tommorow row"
+      )
+
+      def show_today(message)
+        Ruboty::Actions::GoogleSpreadsheet::ShowToday.new(message, :today).call
+      end
+
+      def show_tommorow(message)
+        Ruboty::Actions::GoogleSpreadsheet::ShowToday.new(message, :tommorow).call
       end
     end
   end
